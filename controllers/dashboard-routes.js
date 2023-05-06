@@ -35,8 +35,8 @@ router.get ('/', withAuth, (req, res) => { // withAuth to ensure user is logged 
             attributes: ['username']
         }]
     })
-    .then (data => {
-        const posts = data.map (post => post.get ({ plain: true}));
+    .then (postData => {
+        const posts = postData.map (post => post.get ({ plain: true}));
         res.render('dashboard', { posts, loggedIn: true });
     })
     .catch (err => {
@@ -76,12 +76,12 @@ router.get ('/edit/:id', withAuth, (req, res) => {
             }
         }]
     })
-    .then(data => {
-        if(!data) {
+    .then(postData => {
+        if(!postData) {
             res.status(404).json ({ message: 'A post with this ID could not be found' });
             return;
         }
-        const post = data.get({ plain: true });
+        const post = postData.get({ plain: true });
         res.render('edit-post', { post, loggedIn: true }); // If post is found, render edit-post Hanldebars template
     })
     .catch(err => {
