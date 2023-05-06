@@ -31,8 +31,8 @@ router.get('/', (req, res) => {
         attributes: ['username']
         }]
     })
-    .then(data => {
-        const posts = data.map(post => post.get({ plain: true }))
+    .then(postData => {
+        const posts = postData.map(post => post.get({ plain: true }))
         res.render('homepage', { posts, loggedIn: req.session.loggedIn });
     })
     .catch(err => {
@@ -42,7 +42,7 @@ router.get('/', (req, res) => {
 });
 
 
-// GET route for login endpoint
+// GET route to render login view
 router.get('/login', (req, res) => {
     if (req.session.loggedIn) {
         res.redirect('/');
@@ -52,7 +52,7 @@ router.get('/login', (req, res) => {
 });
 
 
-// GET route for signup endpoint
+// GET route to render signup view
 router.get('/signup', (req, res) => {
     res.render('signup');
 });
@@ -89,13 +89,14 @@ router.get('/post/:id', (req, res) => {
             attributes: ['username'] 
         }]
     })
-    .then(data => {
-        if (!data) {
+    .then(postData => {
+        if (!postData) {
             res.status(404).json({message: 'A user with this ID could not be found'});
             return;
         }
-        const post = data.get({ plain: true});
+        const post = postData.get({ plain: true});
         console.log(post);
+        // Render single-post view sending the retrieved post data as a response to the client
         res.render('single-post', { post, loggedIn: req.session.loggedIn});
     })
     .catch(err => {
@@ -106,7 +107,7 @@ router.get('/post/:id', (req, res) => {
 
 
 // GET endpoint to retrieve from database a specific post as well as the post's comments and user information
-router.get('/posts-comments', (req, res => {
+router.get('/posts-comments', (req, res) => {
     Post.findOne({
         where: {
             id: req.params.id
@@ -136,19 +137,19 @@ router.get('/posts-comments', (req, res => {
             attributes: ['username']
         }]
     })
-    .then(data => {
-        if(!data) {
+    .then(postData => {
+        if(!postData) {
             res.status(404).json({ message: 'A post with this ID could not be found'});
             return;
         }
-        const post = data.get({ plain: true});
-
-        res.render('posts-comments', { post, loddedIn: req.session.loddedIn});
+        const post = postData.get({ plain: true});
+        // Render post-comments view sending the retrieved post data as a response to the client
+        res.render('posts-comments', { post, loggedIn: req.session.loggedIn});
     })
     .catch(err => {
         console.log(err);
         res.status(500).json(err);
     });
-}));
+});
 
 module.exports = router;
