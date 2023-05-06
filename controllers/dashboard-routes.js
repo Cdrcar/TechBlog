@@ -45,7 +45,7 @@ router.get ('/', withAuth, (req, res) => { // withAuth to ensure user is logged 
     });
 });
 
-// GET route to edit a post with a specific ID
+// GET route to edit a post from the dashboard with a specific ID 
 router.get ('/edit/:id', withAuth, (req, res) => {
     Post.findOne({
         where: {
