@@ -1,17 +1,17 @@
 const { Comment } = require('../models');
 
 const seededComents = [{
-    comment_text: "5G is the fifth generation of wireless technology, providing faster speeds, greater connectivity, and lower latency. The technology will facilitate new and innovative applications in industries like healthcare, automotive, entertainment, and education.",
+    comment_text: "Some studies suggest that exposure to electromagnetic radiation from 5G networks may increase the risk of cancer and other health issues",
     user_id: 1,
     post_id: 1
 },
 {
-    comment_text: "Artificial Intelligence (AI) is the simulation of human intelligence processes by machines. It has already transformed various industries, including healthcare, finance, and marketing. AI is expected to grow and impact more areas of our daily lives, such as smart homes and autonomous cars.",
+    comment_text: "It's exciting to see how this technology continues to advance and benefit society.",
     user_id: 2,
     post_id: 2
 },
 {
-    comment_text: "Blockchain is a decentralized, digital ledger that stores information across a network of computers. It is best known for powering cryptocurrencies like Bitcoin, but its applications extend beyond finance. Blockchain can be used in supply chain management, voting systems, and more, providing security and transparency.",
+    comment_text: "The decentralized nature of blockchain makes it difficult to tamper with data, ensuring trust and integrity in transactions.",
     user_id: 3,
     post_id: 3
 }];
