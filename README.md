@@ -1,5 +1,5 @@
 # TechBlog
-CMS-style blog following the MVC paradigm in its architectural structure
+CMS-style blog following the MVC paradigm in its architectural structure.
 
 ## [Table of Contents](#table-of-contents)
 
