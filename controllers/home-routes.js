@@ -25,15 +25,15 @@ router.get('/', (req, res) => {
                 model: User,
                 attributes: ['username']
             }
-        },
-        {
-        model: User,
-        attributes: ['username']
-        }]
-    })
+            },
+            {
+            model: User,
+             attributes: ['username']
+            }]
+    })  
     .then(postData => {
         const posts = postData.map(post => post.get({ plain: true }))
-        res.render('homepage', { posts, loggedIn: req.session.loggedIn });
+        res.render('homepage', { posts, loggedIn: req.session.loggedIn }); // Render view template passing in two arguments: the homepage hanldebars and the data being passed with two properties: the posts and loggedInd which is a boolean indicating if the user is currently logged in or not
     })
     .catch(err => {
         console.log(err);
