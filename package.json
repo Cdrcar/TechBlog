@@ -6,14 +6,15 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "watch": "nodemon server.js"
+    "watch": "nodemon server.js",
+    "seed": "node seeds/index.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "bcrypt": "^5.0.1",
-    "connect-session-sequelize": "^6.1.1",
+    "connect-session-sequelize": "^7.1.6",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "express-handlebars": "^7.0.7",
@@ -21,6 +22,6 @@
     "handlebars": "^4.7.7",
     "mysql": "^2.18.1",
     "mysql2": "^2.2.5",
-    "sequelize": "^4.44.4"
+    "sequelize": "^6.31.1"
   }
 }

@@ -16,6 +16,6 @@ const seededComents = [{
     post_id: 3
 }];
 
-const seedComments = () => Comment.bulk(seededComents);
+const seedComments = () => Comment.bulkCreate(seededComents);
 
 module.exports = seedComments;
