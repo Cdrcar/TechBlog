@@ -36,38 +36,39 @@ This TechBlog website allows users to publish blog posts and comment other user'
 
 [Link to Heroku]()
 
-## [Installation](#table-of-contents)
-
-Install the following packages and dependencies:
-
-> Node.js
-
-> MySQL
-
-> Insomia or any other API development enviroment
-
-Once you have Node.js and MySQL installed, you'll need to install the required dependencies for this app: Express.js sequelize, MySQL2
+1. Install Node.js and MySQL on your machine.
+2. Clone the repository to your local system.
+3. Open the repository in your preferred code editor.
+4. Install the required dependencies by running the following command in the terminal:
 
 > package.json: npm i
 
-## [Usage](#table-of-contents)
+5. Set the following environment variables with your MySQL database details:
 
-Add your MySQL username, password, and database name as environment variables. 
-
-> DB_NAME='techblog'  
+> DB_NAME='sociosynergy_db'  
 > DB_USER='your_username'  
 > DB_PW='your_password'
 
-Open MySQL shell and insert the commands: 
+6. Open MySQL shell and insert the commands: 
 
 > source db/schema.sql
 > use techblog
 
-Exit MySQL shell and 
-Start the app by running the following command in your terminal: 
+7. Exit MySQL shell and start the app by running the following command in your terminal: 
 
 > npm run seed
 > node server.js
+
+## [Usage](#table-of-contents)
+
+To use SocioSinergy, follow these steps:
+
+1. Make sure the application is running by executing npm run seed followed by node server.js.
+2. Access the application through your preferred web browser.
+3. Sign up for a new account or log in if you already have one.
+4. Create your tech posts and share with other users on the platform.
+5. Comment posts from other users.
+
 
 ## [License](#table-of-contents)
 
@@ -79,7 +80,13 @@ Licenced under:
 
 ## [Tests](#table-of-contents)
 
-To test this app, clone the repository, open the file in your source-code editor, complete the installation and usage running the code `node server.js`. This will start the server and sync the Sequelize models to the MySQL database. You can then use your API development environment (for example Insomnia) to test the API routes using different HTTP request methods like get, post, put and delete.
+To test this application, follow these steps:
+
+1. Clone the repository to your local system.
+2. Open the repository in your preferred code editor.
+3. Complete the installation process as described in the Installation section.
+4. Start the server and sync the Sequelize models with the MySQL database by running the command node server.js.
+5. Use an API development environment (e.g., Insomnia) to test the API routes using various HTTP request methods such as GET, POST, PUT, and DELETE.
 
 ## [Contact Me](#table-of-contents)
 
