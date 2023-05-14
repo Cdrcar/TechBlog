@@ -1,15 +1,15 @@
 const { User } = require ('../models');
 
 const seededUser = [{
-    username: 'User1',
+    username: 'Carmela',
     password: 'abc123'
 },
 {
-    username: 'User2',
+    username: 'Logan',
     password: 'abc456'
 },
 {
-    username: 'User3',
+    username: 'Elbi',
     password: 'abc789'
 }];
 
