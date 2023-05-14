@@ -30,7 +30,10 @@ Technovate is a website that allows users to publish blog posts and comment othe
 
 ## [Final Result](#table-of-contents)
 
-![]()
+![homepage](public/img/homepage.png)
+![comment](public/img/comment.png)
+![login](public/img/login.png)
+
 ![]()
 
 ## [Deployment](#deployment)
