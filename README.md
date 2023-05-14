@@ -1,4 +1,5 @@
-# TechBlog
+# Technovate
+
 CMS-style blog following the MVC paradigm in its architectural structure.
 
 ## [Table of Contents](#table-of-contents)
@@ -14,7 +15,7 @@ CMS-style blog following the MVC paradigm in its architectural structure.
 
 ## [Description](#table-of-contents)
 
-This TechBlog website allows users to publish blog posts and comment other user's posts as well. It follows he MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
+Technovate is a website that allows users to publish blog posts and comment other user's posts as well. It follows he MVC paradigm in its architectural structure, using Handlebars.js as the templating language, Sequelize as the ORM, and the express-session npm package for authentication.
 
 `Technologies used:`
 
@@ -36,6 +37,8 @@ This TechBlog website allows users to publish blog posts and comment other user'
 
 [Link to Heroku]()
 
+## [Installation](#installation)
+
 1. Install Node.js and MySQL on your machine.
 2. Clone the repository to your local system.
 3. Open the repository in your preferred code editor.
@@ -45,7 +48,7 @@ This TechBlog website allows users to publish blog posts and comment other user'
 
 5. Set the following environment variables with your MySQL database details:
 
-> DB_NAME='sociosynergy_db'  
+> DB_NAME='techblog'  
 > DB_USER='your_username'  
 > DB_PW='your_password'
 
@@ -61,7 +64,7 @@ This TechBlog website allows users to publish blog posts and comment other user'
 
 ## [Usage](#table-of-contents)
 
-To use SocioSinergy, follow these steps:
+To use Technovate, follow these steps:
 
 1. Make sure the application is running by executing npm run seed followed by node server.js.
 2. Access the application through your preferred web browser.
