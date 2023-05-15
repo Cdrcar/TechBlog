@@ -1,7 +1,7 @@
 // Define Model for User table
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
-const bcrypt = require('bcrypt'); // Library used for password hashing
+const bcrypt = require('bcryptjs'); // Library used for password hashing
 
 class User extends Model {
     checkPassword(loginPw) { // checkPassword method compares the entered password (loginPw) with the hashed password stored in the password column of the current User instance     
