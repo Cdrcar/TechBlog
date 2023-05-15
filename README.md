@@ -34,11 +34,10 @@ Technovate is a website that allows users to publish blog posts and comment othe
 ![comment](public/img/comment.png)
 ![login](public/img/login.png)
 
-![]()
 
 ## [Deployment](#deployment)
 
-[Link to Heroku]()
+[Link to Heroku](https://technovate.herokuapp.com/)
 
 ## [Installation](#installation)
 
